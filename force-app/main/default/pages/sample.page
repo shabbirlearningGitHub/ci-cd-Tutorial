@@ -1,0 +1,12 @@
+<apex:page controller="Samplevfpagecontroler">
+   <apex:form >
+    
+       <apex:commandbutton value="call" action="{!callme}"/>
+   
+   
+  
+  Name : {!name }<br/><br/>
+  Branch:{!branch}<br/><br/>
+  City : {! city } <br/><br/>
+       </apex:form>
+ </apex:page>

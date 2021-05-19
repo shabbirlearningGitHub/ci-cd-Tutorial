@@ -1,0 +1,20 @@
+<apex:page controller="wrapperex">
+  <apex:form >
+      <apex:commandButton value="Create" action="{!Create}"/>
+      
+          <apex:pageBlock title="Account"> 
+              <apex:pageBlockSection >
+              <apex:InputField value="{!acc.accs.name}"/>
+              <apex:InputField value="{!acc.accs.Industry}"/>
+              </apex:pageBlockSection>
+          </apex:pageBlock>
+          
+           <apex:pageBlock title="contact"> 
+              <apex:pageBlockSection >
+              <apex:InputField value="{!con.Lastname}"/>
+              <apex:InputField value="{!con.Status__c}"/>
+              </apex:pageBlockSection>
+          </apex:pageBlock>
+      
+  </apex:form>
+</apex:page>

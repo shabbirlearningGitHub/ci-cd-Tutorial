@@ -1,0 +1,22 @@
+<apex:page standardController="Account">
+ <apex:form >
+     <apex:commandButton value="save" action="{!save}"/>
+     <apex:commandButton value="cancel" action="{!cancel}"/>
+     <apex:pageBlock Title="Lead">
+         <apex:pageBlockSection >
+            
+              <apex:inputfield Value="{!Account.Name}"/>
+             </apex:pageBlockSection>
+             
+             <apex:pageblocksection >
+            <apex:inputfield Value="{!Account.Phone}"/>
+            </apex:pageblocksection>
+            
+            <apex:pageblocksection >
+            <apex:inputfield Value="{!Account.Fax}"/>
+            </apex:pageblocksection> 
+            
+      
+     </apex:pageBlock>
+ </apex:form>
+</apex:page>

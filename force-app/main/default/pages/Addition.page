@@ -1,0 +1,37 @@
+<apex:page controller="Add">
+    <Apex:form >
+     <apex:messages />
+
+        <apex:commandButton value="Addition" action="{!Additionoftwonumber}"/>
+        <apex:commandButton value="Reset" action="{!Resetinput}"/>
+        
+        <apex:pageBlock title="Addition of Two Number">
+            <apex:pageBlockSection columns="2">
+                <apex:pageblockSectionItem >
+                    <apex:outputLabel > Aval</apex:outputLabel>
+                    <apex:inputtext value="{!aval}"></apex:inputtext>
+                </apex:pageblockSectionItem>
+                
+                <apex:pageblockSectionItem >
+                    <apex:outputLabel > Bval</apex:outputLabel>
+                    <apex:inputtext value="{!bval}"></apex:inputtext>
+                </apex:pageblockSectionItem>
+                
+                 
+            </apex:pageBlockSection>
+                <apex:pageBlockSection >
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel > cval</apex:outputLabel>
+                    <apex:outputtext value="{!cval}"></apex:outputtext>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel > cval</apex:outputLabel>
+                    <apex:outputtext value="{!cval}"></apex:outputtext>
+                </apex:pageBlockSectionItem>
+                
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </Apex:form>
+         
+</apex:page>

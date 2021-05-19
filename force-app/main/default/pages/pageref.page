@@ -1,0 +1,5 @@
+<apex:page controller="goo" >
+  <apex:form >
+      <apex:commandButton value="Google" action="{!urlofgoogle}"/>
+  </apex:form>
+</apex:page>

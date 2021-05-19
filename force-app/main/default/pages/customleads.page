@@ -1,0 +1,23 @@
+<apex:page controller="CMLeads">
+ <apex:form >
+     <apex:commandButton value="Create"  action="{!Create}"/>
+     <apex:commandButton value="Refresh"  action="{!Refresh}"/>
+     <apex:commandButton value="SaveandNew"  action="{!SaveandNew}"/>
+     
+     <apex:pageBlock title="Lead">
+         <apex:pageBlockSection >
+             <apex:inputField value="{!Leads.Lastname}"/>
+         </apex:pageBlockSection>
+         
+         <apex:pageBlockSection >
+             <apex:inputField value="{!Leads.Company}"/>
+         </apex:pageBlockSection>
+         
+         <apex:pageBlockSection >
+             <apex:inputField value="{!Leads.Status}"/>
+         </apex:pageBlockSection>
+         
+     </apex:pageBlock>
+ </apex:form>
+ 
+</apex:page>

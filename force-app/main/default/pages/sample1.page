@@ -1,0 +1,9 @@
+<apex:page controller="sample1">
+<apex:form >
+<apex:commandButton action="{!callme}" value="call"/>
+name: {!name}<br/>
+Branch:{!branch}<br/>
+city:{!city}
+</apex:form>
+  
+</apex:page>

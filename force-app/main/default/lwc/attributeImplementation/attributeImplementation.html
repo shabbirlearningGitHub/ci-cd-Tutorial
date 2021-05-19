@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="myFirstLightning Application" icon-name="custom:custom4">
+        <lightning-layout vertical-align="center" >
+            <lightning-layout-item padding="around-small">
+                <template if:true={name}>
+                <lightning-formatted-text value={name}></lightning-formatted-text>
+            </template>
+            </lightning-layout-item>
+
+        </lightning-layout>
+
+        <lightning-layout vertical-align="center" >
+            <lightning-layout-item padding="around-small">
+                <lightning-formatted-text value={userId}></lightning-formatted-text>
+            </lightning-layout-item>
+
+        </lightning-layout>
+        <lightning-layout>
+            <lightning-button variant="brand" label="calljs" onclick={callfunction}></lightning-button>
+        </lightning-layout>
+
+    </lightning-card>
+    
+</template>

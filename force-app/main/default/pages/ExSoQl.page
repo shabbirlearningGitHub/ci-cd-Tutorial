@@ -1,0 +1,31 @@
+<apex:page controller="SoqlEx" readOnly="True" >
+  <apex:form >
+  <apex:InputText value="{!find}"/>
+  <apex:commandButton value="search and show" action="{!Searchandshowrecords}"/>
+      <apex:PageBlock title="Account">
+          <apex:pageBlockTable value="{!acc}" var="a"> 
+          <apex:column >
+          
+             <apex:inputcheckbox />
+             <apex:facet name="Header">
+             <apex:inputcheckbox />
+             </apex:facet>
+             
+          </apex:column>
+          <apex:column value="{!a.name}" HeaderValue="Name"/>
+          
+          <!--<apex:column value="{!a.Industry}" HeaderValue="Industry"/>
+           <apex:column value="{!a.Phone}" HeaderValue="Phone"/>-->
+          <apex:column HeaderValue="Contacts">
+               <apex:pageBlockTable Value="{!a.contacts}" var="con">
+                   <apex:column value="{!con.Lastname}" />
+               
+               </apex:pageBlockTable>
+           </apex:column>
+               
+          </apex:pageBlockTable>
+      </apex:PageBlock>
+  </apex:form>
+  
+  
+</apex:page>

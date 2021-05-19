@@ -1,0 +1,28 @@
+<apex:page controller="Mulple">
+<apex:form >
+    <apex:commandButton value="MUl Obje create" action="{!MUlCreation}"/>
+    <apex:pageBlock Title="Account"> 
+        <apex:pageblockSection >
+        <apex:InputField value="{!acc.Name}"/>
+        <apex:InputField value="{!acc.Industry}"/>
+        </apex:pageblockSection>
+    </apex:pageBlock>
+    
+    <apex:pageBlock Title="contact"> 
+        <apex:pageblockSection >
+        <apex:InputField value="{!con.LastName}"/>
+       
+        </apex:pageblockSection>
+    </apex:pageBlock>
+    
+    <apex:pageBlock Title="Opportunity"> 
+        <apex:pageblockSection >
+        <apex:InputField value="{!opp.Name}"/>
+        <apex:InputField value="{!opp.stagename}"/>
+         <apex:InputField value="{!opp.closedate}"/>
+        </apex:pageblockSection>
+    </apex:pageBlock>
+    
+</apex:form>
+  
+</apex:page>

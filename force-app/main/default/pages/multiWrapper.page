@@ -1,0 +1,44 @@
+<apex:page controller="MultiWrapes">
+    
+    <apex:form >
+        <apex:pageBlock Id="pb">
+            <apex:commandButton value="Accounts" action="{!accs}" reRender="pb"/>
+                <apex:pageBlockSection Title="Account" collapsible="true">
+                     <apex:pageBlockSectionItem > 
+                       <apex:outputLabel value="Name"></apex:outputLabel>
+                       <apex:inputText value="{!acc.name}"/>
+                     </apex:pageBlockSectionItem> 
+                     
+                     <apex:pageBlockSectionItem > 
+                       <apex:outputLabel value="Industry"></apex:outputLabel>
+                       <apex:inputText value="{!acc.Industry}"/>
+                     </apex:pageBlockSectionItem> 
+                     
+                     <apex:pageBlockSectionItem > 
+                       <apex:outputLabel value="Rating"></apex:outputLabel>
+                       <apex:outputText value="{!acc.rating}"/>
+                     </apex:pageBlockSectionItem>
+    
+                </apex:pageBlockSection>
+                
+                <apex:commandButton value="optys" action="{!optys}" rerender="pb"/>
+ <apex:pageblocksection Title="Opportunity" collapsible="false">
+ <apex:pageBlockSectionItem >
+ <apex:outputLabel value="Name"></apex:outputLabel>
+ <apex:inputText value="{!opp.name}"/>
+ </apex:pageBlockSectionItem>
+ <apex:pageBlockSectionItem >
+ <apex:outputLabel value="stagename"></apex:outputLabel>
+ <apex:inputText value="{!opp.stagename}"/>
+ </apex:pageBlockSectionItem>
+ <apex:pageBlockSectionItem >
+ <apex:outputLabel value="{!opp.closedate}"></apex:outputLabel>
+ </apex:pageBlockSectionItem>
+ </apex:pageblocksection>
+ </apex:pageblock>
+                
+        
+    </apex:form>
+    
+ 
+</apex:page>

@@ -1,0 +1,12 @@
+<aura:component controller ="SortableAccountTableController" implements="force:appHostable,force:lightningQuickAction,flexiPage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" >
+   <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+	<aura:attribute name="accountData" type="Object"/>
+    <aura:attribute name="AccountIDs" type="String"/>
+    <aura:attribute name="accountColumns" type="List"/>
+    <lightning:datatable aura:id="accountTable"
+                         keyField="Id"
+                         hideCheckboxColumn="true"
+                         columns="{!v.accountColumns}"
+                         data="{!v.accountData}"
+                         />
+</aura:component>

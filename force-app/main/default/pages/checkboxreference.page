@@ -1,0 +1,43 @@
+<apex:page controller="SOQL22" >
+ <apex:form >
+ <apex:pageblock >
+ Enter the Industry <apex:inputtext value="{!find}"/>
+ <apex:commandbutton value="Search" action="{!search}"/>
+ </apex:pageblock>
+
+
+ <Apex:pageblock >
+ <apex:pageblocktable value="{!accs}" var="b">
+ <apex:column >
+ <apex:inputcheckbox value="{!b.flag}"/>
+ </apex:column>
+
+ <apex:column value="{!b.acc.name}"/>
+ <apex:column value="{!b.acc.phone}"/>
+ <apex:column value="{!b.acc.industry}"/>
+
+ </apex:pageblocktable>
+ <apex:commandbutton value="Delete" action="{!del}"/><br/>
+
+ </Apex:pageblock>
+ <Apex:pageblock Title="Deleted">
+ <apex:inputcheckbox value="{!f1}">
+ <apex:actionsupport event="onchange" action="{!allsel}">
+ </apex:actionsupport>
+ </apex:inputcheckbox>
+ <apex:pageblocktable value="{!del}" var="c">
+ <apex:column >
+ <apex:inputcheckbox value="{!c.flag}"/>
+ </apex:column>
+
+ <apex:column value="{!c.acc.name}"/>
+ <apex:column value="{!c.acc.phone}"/>
+ <apex:column value="{!c.acc.industry}"/>
+
+ </apex:pageblocktable>
+ <apex:commandbutton value="UnDelete" action="{!undel}"/>
+ </Apex:pageblock>
+
+
+ </apex:form>
+</apex:page>
