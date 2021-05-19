@@ -1,4 +1,4 @@
 public class Accoundetails {
     Public Account accs {set;get;}
-    System.debug('Test Shabbir');
+    System.debug('Test Shabbir');//
 }
